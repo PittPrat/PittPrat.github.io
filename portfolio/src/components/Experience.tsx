@@ -4,33 +4,39 @@ import TimelineSection from './TimelineSection';
 const Experience = () => {
   const timelineItems = [
     {
-      date: '2021 - Present',
-      title: 'Senior Software Engineer',
-      subtitle: 'Tech Corp',
+      date: '2023 - 2024',
+      title: 'Senior Consultant',
+      subtitle: 'Deloitte',
       description: [
-        'Leading a team of 5 developers on a major platform redesign',
-        'Implemented microservices architecture reducing system latency by 60%',
-        'Mentored 3 junior developers to senior positions'
+        'Led the development of Shell’s EV & Fuel Pricing system across 5 European markets, reducing compute costs by 90%',
+        'Designed and deployed an AI-driven demand forecasting model, predicting a 12% revenue increase',
+        'Optimized multi-database architecture (PostgreSQL, Azure Storage, SQL Server), reducing storage costs by 30%',
+        'Implemented Power BI automation, increasing business intelligence adoption by 35%',
+        'Managed cross-functional collaboration between engineering, data science, and business teams to define roadmap strategy'
       ]
     },
     {
-      date: '2018 - 2021',
-      title: 'Software Engineer',
-      subtitle: 'Innovation Labs',
+      date: '2020 - 2022',
+      title: 'Senior Consultant',
+      subtitle: 'Concentrix Catalyst',
       description: [
-        'Developed and maintained multiple full-stack applications',
-        'Reduced deployment time by 70% through CI/CD implementation',
-        'Received Outstanding Performance Award in 2020'
+        'Architected event-driven microservices, improving system scalability by 40% and reducing operational costs',
+        'Led AI-driven risk intelligence platform strategy, detecting 300K+ additional critical events per month',
+        'Developed a custom ElasticSearch cluster, reducing infrastructure costs by 35% while enhancing search speed by 40%',
+        'Owned key features in MCI’s enterprise resource management software used by Fortune 500 organizations',
+        'Optimized cloud infrastructure (Azure Kubernetes & Terraform), streamlining deployments with zero downtime'
       ]
     },
     {
-      date: '2016 - 2018',
-      title: 'Junior Developer',
-      subtitle: 'StartUp Co',
+      date: '2017 - 2020',
+      title: 'Consultant',
+      subtitle: 'Infosys',
       description: [
-        'Built responsive web applications using React',
-        'Contributed to open-source projects',
-        'Improved test coverage from 40% to 85%'
+        'Developed and modernized cloud-based APIs for Charles Schwab, transitioning legacy financial systems to scalable cloud solutions',
+        'Reduced database query execution time by 30% across SQL & NoSQL databases, improving transaction speeds',
+        'Created AKKA.NET-based performance benchmarking tool, adopted company-wide for REST API validation',
+        'Executed Blue-Green deployments ensuring zero downtime for critical financial applications serving millions',
+        'Implemented security best practices with SonarQube & Veracode, ensuring 90%+ code coverage and zero vulnerabilities'
       ]
     }
   ];

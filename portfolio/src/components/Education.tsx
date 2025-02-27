@@ -4,23 +4,23 @@ import TimelineSection from './TimelineSection';
 const Education = () => {
   const timelineItems = [
     {
-      date: '2018 - 2020',
-      title: 'Master of Science in Computer Science',
-      subtitle: 'University of Technology',
+      date: 'June 2024 - June 2025',
+      title: 'Master of Science in Information Systems',
+      subtitle: 'University of Washington, Foster School of Business',
       description: [
-        'Specialized in Machine Learning and AI',
-        'GPA: 3.9/4.0',
-        'Research Assistant in Natural Language Processing Lab'
+        'Focus: AI/ML, Cybersecurity, Cloud Computing, IT Strategy & Business Analytics',
+        'Selected Courses: Data Mining, Machine Learning Applications, Advanced Databases, IT Project Management',
+        'Building expertise in AI-driven decision-making & cloud-native architectures'
       ]
     },
     {
-      date: '2014 - 2018',
-      title: 'Bachelor of Science in Computer Science',
-      subtitle: 'State University',
+      date: 'Sep 2013 - May 2017',
+      title: 'Bachelor of Engineering in Electrical & Electronics Engineering',
+      subtitle: 'Osmania University, India',
       description: [
-        'Dean\'s List all semesters',
-        'Led Computer Science Student Association',
-        'Completed honors thesis on distributed systems'
+        'Graduated with First Class Distinction (Top 10% of Class)',
+        'Organized biennial renewable energy conference – Akshay Urja',
+        'Developed projects in C, Python, MATLAB & Arduino for Robot wars, Line follwer robots.'
       ]
     }
   ];
