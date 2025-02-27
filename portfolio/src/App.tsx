@@ -53,7 +53,7 @@ function App() {
 
           {/* Typing Animation */}
           <div className="h-8 mb-8 text-center">
-            <TypewriterComponent words={['Full-stack Developer.', 'Technical Product Manager.', 'AI/ML Enthusiast.']} />
+            <TypewriterComponent words={['Full-stack Developer.', 'Technical Product Manager.', 'AI/ML Engineer.']} />
           </div>
 
           {/* Navigation */}
@@ -75,13 +75,13 @@ function App() {
 
           {/* Social Links */}
           <div className="flex justify-center items-center space-x-8 mt-8">
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/prathik-pittala-292434105" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="w-6 h-6 text-white/80 hover:text-white transition-colors" />
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/PittPrat" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="w-6 h-6 text-white/80 hover:text-white transition-colors" />
             </a>
-            <a href="mailto:your.email@example.com" aria-label="Email">
+            <a href="mailto:pittalaprathik@gmail.com" aria-label="Email">
               <Mail className="w-6 h-6 text-white/80 hover:text-white transition-colors" />
             </a>
           </div>
