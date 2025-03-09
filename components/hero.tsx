@@ -39,7 +39,7 @@ export default function Hero() {
           playsInline 
           className="w-full h-full object-cover"
         >
-          <source src="/videos/Vid3.mp4" type="video/mp4" />
+          <source src="/videos/Video.mp4" type="video/mp4" />
         </video>
       </div>
       
@@ -84,7 +84,7 @@ export default function Hero() {
             </a>
           </Button> */}
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/gallery">Image Gallery</Link>
+            <Link href="/gallery">GenAI Gallery</Link>
           </Button>
         </div>
       </div>

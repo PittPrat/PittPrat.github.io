@@ -39,7 +39,7 @@ export default async function Gallery() {
   playsInline 
   className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
 >
-  <source src="/videos/Vid3.mp4" type="video/mp4" />
+  <source src="/videos/Video.mp4" type="video/mp4" />
 </video>
 <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-[-1]"></div>
 
