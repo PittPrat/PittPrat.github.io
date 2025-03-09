@@ -11,9 +11,9 @@ interface TypewriterProps {
 
 export default function Typewriter({
   words,
-  typingSpeed = 100,
-  deletingSpeed = 50,
-  delayBetweenWords = 1500,
+  typingSpeed = 60,
+  deletingSpeed = 40,
+  delayBetweenWords = 1000,
 }: TypewriterProps) {
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
@@ -23,47 +23,50 @@ export default function Typewriter({
   const currentWordRef = useRef(words[0])
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout
-
-    // If we're waiting between words, don't do anything
-    if (isWaiting) return
-
+    // Safety check for words array
+    if (!words || !words.length || wordIndex >= words.length) return;
+    
     // Set the current word
-    currentWordRef.current = words[wordIndex]
-
-    // If we're deleting
-    if (isDeleting) {
+    currentWordRef.current = words[wordIndex];
+    
+    let timeout: NodeJS.Timeout;
+    
+    // If we're waiting between words, just set up the timeout for the next state
+    if (isWaiting) {
       timeout = setTimeout(() => {
-        setDisplayText((prev) => prev.substring(0, prev.length - 1))
-
+        setIsDeleting(true);
+        setIsWaiting(false);
+      }, delayBetweenWords);
+    } 
+    // If we're deleting
+    else if (isDeleting) {
+      timeout = setTimeout(() => {
+        setDisplayText((prev) => prev.substring(0, prev.length - 1));
+        
         // If we've deleted everything, start typing the next word
-        if (displayText.length <= 1) {
-          setIsDeleting(false)
-          setWordIndex((prev) => (prev + 1) % words.length)
+        if (displayText === "") {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
         }
-      }, deletingSpeed)
+      }, deletingSpeed);
     }
     // If we're typing
     else {
       timeout = setTimeout(() => {
         // If we haven't typed the full word yet
         if (displayText.length < currentWordRef.current.length) {
-          setDisplayText(currentWordRef.current.substring(0, displayText.length + 1))
+          setDisplayText(currentWordRef.current.substring(0, displayText.length + 1));
         }
-        // If we've typed the full word, wait and then start deleting
+        // If we've typed the full word, enter waiting state
         else {
-          setIsWaiting(true)
-          timeout = setTimeout(() => {
-            setIsDeleting(true)
-            setIsWaiting(false)
-          }, delayBetweenWords)
+          setIsWaiting(true);
         }
-      }, typingSpeed)
+      }, typingSpeed);
     }
-
-    return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, delayBetweenWords, isWaiting])
-
+    
+    // Clean up function to clear timeout
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, delayBetweenWords, isWaiting]);
   return (
     <span className="inline-block min-h-[1.5em]">
       {displayText}

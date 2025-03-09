@@ -48,7 +48,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div
         ref={ref}
-        className={cn("text-center z-10 px-4 relative transition-opacity duration-1000", 
+        className={cn("text-center z-10 px-4 relative transition-opacity duration-500", 
           inView ? "opacity-100" : "opacity-0")}
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -56,36 +56,33 @@ export default function Hero() {
           <span className="text-primary text-glow">Prathik Pittala</span>
           <span
             className={cn("inline-block w-1 h-12 bg-primary ml-1 animate-blink", 
-              isTypingComplete ? "" : "hidden")}
+              "")}
           ></span>
         </h1>
         <p
           className={cn(
-            "text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 transition-opacity duration-1000 delay-500",
-            isTypingComplete ? "opacity-100" : "opacity-0",
+            "text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 transition-opacity duration-500",
+            "opacity-100",
           )}
         >
           <Typewriter
             words={["Software Development Engineer", "AI/ML Engineer", "Product Manager", "Technical Product Manager"]}
-            typingSpeed={80}
-            deletingSpeed={40}
-            delayBetweenWords={1800}
           />
         </p>
         <div
           className={cn(
-            "flex flex-col sm:flex-row gap-4 justify-center transition-opacity duration-1000 delay-1000",
-            isTypingComplete ? "opacity-100" : "opacity-0",
+            "flex flex-col sm:flex-row gap-4 justify-center transition-opacity duration-500",
+            "opacity-100",
           )}
         >
           <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
             <a href="#projects">View My Work</a>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+          {/* <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
             <a href="/resume.pdf" download>
               Download Resume
             </a>
-          </Button>
+          </Button> */}
           <Button size="lg" variant="secondary" asChild>
             <Link href="/gallery">Image Gallery</Link>
           </Button>

@@ -32,10 +32,16 @@ export default async function Gallery() {
   return (
     <main className="min-h-screen bg-background">
       {/* Video Background (reused from homepage) */}
-      <video autoPlay muted loop playsInline className="video-background">
-        <source src="/videos/background.mp4" type="video/mp4" />
-      </video>
-      <div className="video-overlay"></div>
+      <video 
+  autoPlay 
+  muted 
+  loop 
+  playsInline 
+  className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
+>
+  <source src="/videos/Vid3.mp4" type="video/mp4" />
+</video>
+<div className="fixed top-0 left-0 w-full h-full bg-black/50 z-[-1]"></div>
 
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
@@ -43,7 +49,7 @@ export default async function Gallery() {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Image Gallery</h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              A collection of images from my projects and experiences
+              A collection of images generated using Prompt Engineering with GenAI
             </p>
           </div>
           <Link href="/" className="mt-4 md:mt-0">

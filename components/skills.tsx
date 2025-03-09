@@ -56,7 +56,7 @@ export default function Skills() {
   return (
     <section
       ref={ref}
-      className={cn("transition-opacity duration-1000 delay-300", inView ? "opacity-100" : "opacity-0")}
+      className={cn("transition-opacity duration-500 delay-150", inView ? "opacity-100" : "opacity-0")}
     >
       <h2 className="section-heading">Skills & Expertise</h2>
 

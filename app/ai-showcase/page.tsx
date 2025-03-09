@@ -16,7 +16,7 @@ export default function AIShowcase() {
     <main className="min-h-screen bg-background">
       {/* Video Background (reused from homepage) */}
       <video autoPlay muted loop playsInline className="video-background">
-        <source src="/videos/background.mp4" type="video/mp4" />
+        <source src="/videos/Vid1.mp4" type="video/mp4" />
       </video>
       <div className="video-overlay"></div>
 
@@ -73,7 +73,7 @@ export default function AIShowcase() {
 
           <Card className="overflow-hidden">
             <div className="relative h-64 w-full">
-              <Image src="/images/ai-generated-2.jpg" alt="AI Generated 3D Model" fill className="object-cover" />
+              <Image src="/images/AI2.png" alt="AI Generated 3D Model" fill className="object-cover" />
             </div>
             <CardHeader>
               <div className="flex justify-between items-start">
