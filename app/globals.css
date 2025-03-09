@@ -120,3 +120,29 @@
   @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-primary rounded-full;
 }
 
+/* Add these styles for better mobile responsiveness */
+@media (max-width: 768px) {
+  .timeline-container::after {
+    @apply left-0 transform-none;
+  }
+  
+  .timeline-item {
+    @apply flex-col items-start;
+  }
+  
+  .timeline-content {
+    @apply w-full pl-8 mb-4;
+  }
+  
+  .timeline-dot {
+    @apply left-0 transform-none;
+  }
+  
+  .timeline-date {
+    @apply left-0 transform-none pl-8;
+  }
+  
+  .timeline-left, .timeline-right {
+    @apply text-left pl-8 pr-0 ml-0;
+  }
+}

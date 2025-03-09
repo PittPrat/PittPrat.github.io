@@ -10,8 +10,10 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   assetPrefix: '/',
   basePath: '',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
