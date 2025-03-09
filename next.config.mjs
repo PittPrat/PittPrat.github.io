@@ -1,12 +1,11 @@
 // next.config.mjs
 const isProd = process.env.NODE_ENV === 'production';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+export default {
   output: 'export',
-  basePath: isProd ? '' : '',
-  assetPrefix: isProd ? '/' : '',
-  trailingSlash: true, // Important for GitHub Pages
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true, // Ensure all routes work properly
   images: {
     unoptimized: true, // Required for static export
   },
@@ -16,11 +15,4 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
 };
-
-export default nextConfig;
