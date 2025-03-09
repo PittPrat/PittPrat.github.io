@@ -33,7 +33,7 @@ export default async function Gallery() {
     <main className="min-h-screen bg-background">
       {/* Video Background (reused from homepage) */}
       <video autoPlay muted loop playsInline className="video-background">
-        <source src="/videos/Vid3.mp4" type="video/mp4" />
+        <source src="/videos/background.mp4" type="video/mp4" />
       </video>
       <div className="video-overlay"></div>
 
