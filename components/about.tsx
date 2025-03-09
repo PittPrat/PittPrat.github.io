@@ -22,7 +22,7 @@ export default function About() {
         <div className="relative">
           <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-lg">
             <Image
-              src="/images/Prathik.png?height=400&width=400"
+              src="/videos/Prathik.png?height=400&width=400"
               alt="Prathik Pittala"
               width={400}
               height={400}
