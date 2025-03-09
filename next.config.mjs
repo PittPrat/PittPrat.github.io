@@ -5,7 +5,7 @@ export default {
   output: 'export',
   basePath: '',
   assetPrefix: '',
-  trailingSlash: true, // Ensure all routes work properly
+  trailingSlash: true, // Required for GitHub Pages
   images: {
     unoptimized: true, // Required for static export
   },
@@ -14,5 +14,8 @@ export default {
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  experimental: {
+    appDir: true, // Enable app directory support for Next.js 13+
   },
 };
